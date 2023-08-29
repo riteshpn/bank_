@@ -1,3 +1,4 @@
+import 'package:bank_/constants/app_textstyle.dart';
 import 'package:bank_/constants/color_constant.dart';
 import 'package:bank_/data/card_data.dart';
 import 'package:bank_/widgets/my_cards.dart';
@@ -41,8 +42,9 @@ class _HomeScreenState extends State<HomeScreen> {
       body: SingleChildScrollView(
         physics: ClampingScrollPhysics(),
         child: Padding(
-          padding: EdgeInsets.all(20),
+          padding: EdgeInsets.all(10),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
                 height: 220,
@@ -60,7 +62,15 @@ class _HomeScreenState extends State<HomeScreen> {
                   shrinkWrap: true,
                   scrollDirection: Axis.horizontal,
                 ),
-              )
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Text(
+                "Recent Transactions",
+                style: ApptextStyle.BODY_TEXT,
+              ),
+              SizedBox(height: 10,)
             ],
           ),
         ),
